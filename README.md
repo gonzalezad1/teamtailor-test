@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Clone the repository to your local machine:
 
-Things you may want to cover:
+* ``git clone https://github.com/gonzalezad1/TeamtailorAPI-test``
 
-* Ruby version
+### Navigate to the project directory:
+* ``cd TeamtailorAPI-test``
 
-* System dependencies
+### Install dependencies:
+* ``bundle install``
 
-* Configuration
+### Create a .env file in the root directory and add your TeamTailor API key from the .env.example 
+* ``TEAMTAILOR_API_KEY=your_api_key_here``
 
-* Database creation
+### Start the Rails server:
+* ``rails server``
 
-* Database initialization
 
-* How to run the test suite
+### In your browser to see the web app:
+* ``http://localhost:3000/candidates``
 
-* Services (job queues, cache servers, search engines, etc.)
+### Launch test: 
+* ``bundle exec rspec spec/controllers/candidate_controller_spec.rb``
+* ``bundle exec rspec spec/models/candidate_spec.rb``
 
-* Deployment instructions
 
-* ...
+
