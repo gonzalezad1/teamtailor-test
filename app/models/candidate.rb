@@ -6,7 +6,7 @@ class Candidate < ApplicationRecord
 
     API_VERSION = "20210218"
 
-    def slef.fetch_candidates_with_job_applications
+    def self.fetch_candidates_with_job_applications
         candidates = []
         included_job_applications = []
         
@@ -35,7 +35,7 @@ class Candidate < ApplicationRecord
         return candidates, included_job_applications
     end
 
-    def slef.generate_csv(candidates, included_job_applications)
+    def self.generate_csv(candidates, included_job_applications)
         csv_string = CSV.generate do |csv|
             csv << ['candidate_id', 'first_name', 'last_name', 'email', 'job_application_id', 'job_application_created_at']
             candidates.each do |candidate|
